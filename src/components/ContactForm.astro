@@ -2,20 +2,29 @@
 
 ---
 
-<form @submit:prevent x-data="{ messageText: '' }">
-  <div>
-    <label for='name'>Name</label>
+<form
+  @submit:prevent
+  x-data="{ messageText: '' }"
+  class='bg-gray-100 p-4 rounded-md shadow-2xl'
+>
+  <!-- Form Heading -->
+  <h1 class='text-2xl'>💬 Reach Out Today!</h1>
+  <!-- Name -->
+  <div class='mb-6 mt-2'>
+    <label for='name' class='contact-label'>Name</label>
     <input
       type='text'
       id='name'
       name='name'
       placeholder='First and Last Name'
       required
+      class='contact-input'
     />
     <p class='text-red-500 text-sm mt-1 hidden'>Name is required</p>
   </div>
-  <div>
-    <label for='email'>Email</label>
+  <!-- Email -->
+  <div class='mb-6'>
+    <label for='email' class='contact-label'>Email</label>
     <input
       type='email'
       id='email'
@@ -23,11 +32,13 @@
       required
       pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
       placeholder='e.g., user@example.com'
+      class='contact-input'
     />
     <p class='text-red-500 text-sm mt-1 hidden'>Enter a valid email address</p>
   </div>
-  <div>
-    <label for='phoneNo'>Phone Number</label>
+  <!-- Phone No -->
+  <div class='mb-6'>
+    <label for='phoneNo' class='contact-label'>Phone Number</label>
     <input
       type='tel'
       id='phoneNo'
@@ -35,33 +46,47 @@
       required
       pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'
       placeholder='123-456-7890'
+      class='contact-input'
     />
     <p class='text-red-500 text-sm mt-1 hidden'>Invalid phone number format</p>
   </div>
-  <div>
-    <label for='contactReason'>Reason for Contacting</label>
-    <select id='contactReason' name='contactReason' required>
-      <option value='' selected>Select a reason</option>
+  <!-- Reason for Contacting -->
+  <div class='mb-6'>
+    <label for='contactReason' class='contact-label'
+      >Reason for Contacting</label
+    >
+    <select
+      id='contactReason'
+      name='contactReason'
+      required
+      class='contact-input'
+    >
+      <option value='' selected>Select A Reason</option>
       <option value='new_project'>New Project Estimate</option>
       <option value='general_inquiry'>General Inquiry</option>
       <option value='existing_customer'>Existing Customer</option>
-      <option value='service_issue'>Issues with Service</option>
+      <option value='service_issue'>Issues With Service</option>
       <option value='other'>Other</option>
     </select>
   </div>
-  <div>
-    <label for='message'>Message</label>
+  <!-- Message -->
+  <div class='mb-6'>
+    <label for='message' class='contact-label'>Message</label>
     <textarea
       id='message'
       name='message'
       maxlength='1000'
       required
       x-model='messageText'
-      class='w-full h-32 p-2 border border-gray-300 rounded-md resize-none text-lg text-gray-700 placeholder-gray-500 bg-gray-100 focus:border-gray-700 focus:bg-gray-200'
+      class='contact-input h-32'
       placeholder='Enter your message here'></textarea>
     <p class='text-red-500 text-sm mt-1 hidden'>Message is required</p>
     <p class='text-sm text-gray-500 mt-1'>
       <span x-text='messageText.length'></span> / 1000 characters used
     </p>
   </div>
+  <!-- Newsletter Sign Up -->
+
+  <!-- Submit Button -->
+  <button type='submit' class='btn-primary mb-6'>Contact Us</button>
 </form>
