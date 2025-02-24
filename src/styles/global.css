@@ -5,9 +5,13 @@
 }
 
 .contact-input {
-  @apply w-full mt-2 p-2 rounded-md border-2 border-gray-300 text-lg text-gray-700 placeholder-gray-500 bg-gray-100 focus:border-gray-700 focus:bg-gray-200 hover:border-gray-400;
+  @apply w-full mt-2 p-2 rounded-md border-2 border-gray-300 text-lg text-gray-700 placeholder-gray-500 bg-gray-100 focus:border-gray-700 focus:bg-gray-200 focus:text-gray-900 hover:border-gray-400;
 }
 
 .btn-primary {
-  @apply w-full mt-4 p-2 text-stone-50 bg-indigo-700  hover:bg-indigo-900 rounded-md cursor-pointer uppercase font-bold tracking-wider;
+  @apply w-full mt-4 p-2 text-stone-50 bg-blue-600  hover:bg-blue-700 active:bg-blue-900 rounded-md cursor-pointer uppercase font-bold tracking-wider;
+}
+
+.checkbox-primary {
+  @apply h-5 w-5 text-blue-600 bg-gray-100 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600;
 }

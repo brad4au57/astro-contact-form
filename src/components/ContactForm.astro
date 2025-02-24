@@ -8,7 +8,9 @@
   class='bg-gray-100 p-4 rounded-md shadow-2xl'
 >
   <!-- Form Heading -->
-  <h1 class='text-2xl'>💬 Reach Out Today!</h1>
+  <div class='text-center'>
+    <h1 class='text-4xl'>💬 Reach Out Today!</h1>
+  </div>
   <!-- Name -->
   <div class='mb-6 mt-2'>
     <label for='name' class='contact-label'>Name</label>
@@ -86,7 +88,19 @@
     </p>
   </div>
   <!-- Newsletter Sign Up -->
+  <div class='mb-4 flex items-center space-x-2 cursor-pointer'>
+    <input
+      type='checkbox'
+      id='newsletter'
+      name='newsletter'
+      checked
+      class='checkbox-primary'
+    />
+    <label for='newsletter' class='contact-label'>Sign-up for newsletter</label>
+  </div>
 
   <!-- Submit Button -->
-  <button type='submit' class='btn-primary mb-6'>Contact Us</button>
+  <button type='submit' class='btn-primary mb-6 active:scale-95 transition'
+    >Contact Us</button
+  >
 </form>
